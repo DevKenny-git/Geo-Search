@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text|ZCOOL+XiaoWei&display=swap');
+
+*{
+    margin: 0;
+    
+}
+
+body {
+    font-family: 'Big Shoulders Text', cursive;
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+nav {
+    display: flex;    
+    flex-direction: row;
+    align-content: flex-end;    
+    background: url("globe.jpg");
+    height: 250px;
+    text-align: bottom;
+    
+}
+
+.right {
+    width: 70%;
+    margin-left: 10px;
+     
+
+}
+
+.left {
+    width:30%;  
+    margin-left: 10px;  
+    text-align: bottom;
+}
+
+.left img {
+    margin-top: 180px;
+    width: 40%;
+}
+
+.right ul {
+    display: flex;
+    text-align: bottom;
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 40%;
+    
+}
+
+.right ul li {
+    display: inline-block;
+    margin-left: 10px;   
+    list-style: none;     
+    
+    margin-top: 125px;
+}
+
+
+
+.right ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 2px 2px #822;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: bottom;
+}
+
+.right ul li input {
+    
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+.right ul li button {    
+    border-radius: 5px;
+    background-color: rgb(17, 15, 15);
+    color: white;
+    font-size: 16px;
+    padding: 3px 6px;
+    
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: 'Big Shoulders Text', cursive;
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+@media and (max-width: 600px) {
+    nav {
+        display: block;
+        height: 250px;    
+           
+    }
+
+    .left {
+        margin: 10px;
+    }
+
+    .left p {
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+    }
+}
