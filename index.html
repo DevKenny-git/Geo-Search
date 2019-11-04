@@ -4,27 +4,47 @@
           <title>Geo Search</title>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            
+        
+          <link rel="apple-touch-icon" sizes="57x57" href="./image/apple-icon-57x57.png">
+          <link rel="icon" type="image/png" sizes="192x192"  href="./image/android-icon-192x192.png">
+          <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon-32x32.png">
           <link rel="stylesheet" href="style.css">
+
+          <script src="https://kit.fontawesome.com/26497c3de0.js" crossorigin="anonymous"></script>
+          <script src="https://kit.fontawesome.com/26497c3de0.js" crossorigin="anonymous"></script>
       </head>
       <body>
-          <header>
-              <nav>
-                  <div class="left">                      
-                        <img src="logo.png" alt="logo image" id="logo">                    
+            <nav>
+                    <div class="left">                      
+                          <img src="image/logo.png" alt="logo image" id="logo">                    
+                    </div>
+                    <div class="right">
+                          <ul>
+                              <li><a href="index.html">home</a></li>
+                              <li><a href="#">about</a></li>
+                              <li><a href="#">weather</a></li>
+                              <li><a href="#">Conversion</a></li> 
+                          <li>
+                          <form>
+                              <input type="search" name="search" class="search" >
+                              <i class="fas fa-search"></i>
+                          </form>
+                          </li>
                   </div>
-                  <div class="right">
-                        <ul>
-                            <li><a href="index.html">home</a></li>
-                            <li><a href="index.html">about</a></li>
-                            <li><a href="index.html">weather</a></li>
-                            
-                            <li><input type="search" id="location" ></li>                                        
-                            <li><button id="search">search</button></li>
-                        </ul>
-                        
-                </div>
-              </nav>
-          </header>
+            </nav>
+            <main>
+              <article id="map-container">
+                    
+              </article>              
+          </main>
+          <footer>
+                <ul>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></i>
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
+                </ul>
+              <p><a href="mailto:oladyken@yahoo.com">Shodipe Oladele</a> &copy;<script>document.write(new Date().getFullYear());</script></p>
+          </footer>
       </body>
   </html>
