@@ -41,14 +41,17 @@
                 <form id="formConvert">
                   <div class="label">Select what you want to convert</div>
                   <div class="radio">
-                    <input type="radio" name="convert" value="celcius" ><label>Celcius to Fahrenheit</label>
+                    <input type="radio" name="convert" value="celcius" ><label>Celcius to Fahrenheit</label><br>
                     <input type="radio" name="convert" value="fahrenheit" ><label>Fahrenheit to Celcius</label><br>
                   </div>
-                  
-                  <div id="response"></div>    
+                  <div id="response">
+                    <input type="text" class="input" placeholder="Enter a value to convert">
+
+                    <p id="result"></p>
+                  </div>
+                  <button id="submit">Submit</button>
                 </form>                
-              </div>         
-          
+              </div>                   
           </main>
           <footer>
                 <ul>
