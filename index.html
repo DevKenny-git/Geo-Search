@@ -11,7 +11,8 @@
           <link rel="stylesheet" href="style.css">
 
           <script src="https://kit.fontawesome.com/26497c3de0.js" crossorigin="anonymous"></script>
-          <script src="https://kit.fontawesome.com/26497c3de0.js" crossorigin="anonymous"></script>
+          <script src="jquery-3.3.1.js"></script>
+          
       </head>
       <body>
             <nav>
@@ -21,21 +22,42 @@
                     <div class="right">
                           <ul>
                               <li><a href="index.html">home</a></li>
-                              <li><a href="about.html">about</a></li>
-                              <li><a href="#">weather</a></li>
+                              <li><a href="about.html">about</a></li>                            
                               <li><a href="convert.html">Conversion</a></li> 
-                          <li>
-                          <form>
-                              <input type="search" name="search" class="search" >
-                              <i class="fas fa-search" id="i-search"></i>
-                          </form>
-                          </li>
+                          
+                          
+                          </ul>
                   </div>
             </nav>
             <main>
-              <article id="map">
-                    
-              </article>              
+              <article id="weather">
+                    <form>
+                      <div class="text-description">
+                        <p>Geo-Search is used to display the Weather Conditions and map of a place entered into the search bar. The Weather data are displayed above and the location of the place is displayed on a map below.</p>
+                      </div>
+                      <div>
+                        <input type="search" name="search" class="search"  placeholder="Name of city">
+                       <button id="search">Search</button>
+                     </div>
+                  </form>
+              </article> 
+              <article class="display-weather">
+                  <div class="weather-values">
+                      <div id="weather">
+                        <h5 id="weather-h">Weather Condition: </h5>
+                      </div>
+                      <div id="temperature">
+                        <h5 id="temperature-h">Temperature:  </h5>
+                      </div> 
+                      <div id="humidity">
+                          <h5 id="humidity-h">Humidity: </h5>
+                      </div>
+                      <div id="wind-speed">
+                        <h5 id="wind-h">Wind Speed: </h5>
+                      </div>
+                    </div>
+              </article> 
+
           </main>
           <footer>
                 <ul>
@@ -44,10 +66,9 @@
                     <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
                     <li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
                 </ul>
-              <p><a href="mailto:oladyken@yahoo.com">Shodipe Oladele</a> &copy;<script>document.write(new Date().getFullYear());</script></p>
+              <p><a href="mailto:oladyken@yahoo.com">Shodipe Oladele</a> &copy; 2019</script></p>
           </footer>
           <script src="main.js"></script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-uqReT0Myun1iMyMC9FLhV1zVp7mmY3E&callback=createMap"
-    async defer></script>
+          
       </body>
   </html>
