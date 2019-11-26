@@ -2,31 +2,34 @@
 
 function convertTemperature(chosen) {
 
-	let celciusInput = 0, fahrenheitValue = 0;
+	let celciusInput , fahrenheitValue = 0;
 	
 
 	//calculate conversion based on selection
 	switch (chosen) {
-		case 'celcius' :
-			celciusInput = $('.input').val();
+		case 'celcius' :		
+			 celciusInput = $('.input').val();   
+			  
 			console.log(celciusInput)
-			if ((!($.isNumeric(celciusInput))) || (celciusInput.length < 1)) {
-				fahrenheitValue = 'Please enter a Number';
+			if ( (!($.isNumeric(celciusInput))) || (celciusInput == "") ) {
+				alert('Please enter a Number');
+				return;
 			}
-			fahrenheitValue = celciusInput * 9 / 5 + 32;
+			fahrenheitValue = Math.floor(celciusInput * 9 / 5 + 32);
 			
 			return fahrenheitValue.toFixed(2) + '°F';
+			  
 			break;
 		case 'fahrenheit': 
-			fahrenheitValue = $('.input').val();
-			console.log(fahrenheitValue);
-			if ((!($.isNumeric(fahrenheitValue))) || (fahrenheitValue.length < 1)) {
-				celciusInput = 'Please enter a Number';
-			}	
-			
-			celciusInput = (fahrenheitValue - 32)  * 5 / 9;
-			console.log(celciusInput);
-			return celciusInput.toFixed(2) + '°C';
+				fahrenheitValue = $('.input').val();		
+				if ((!($.isNumeric(fahrenheitValue))) || fahrenheitValue == "")	{
+					alert('Please enter a Number');
+					 $('#result').text(' ');	
+					return;
+				}
+				celciusInput = Math.floor((fahrenheitValue - 32)  * 5 / 9);
+				
+				return celciusInput.toFixed(2) + '°C';			
 			break; 
 	}
 }
@@ -38,17 +41,58 @@ $(document).ready(function() {
 		let	decision = $('input[name="convert"]:checked').val();
 		console.log(decision);
 		//display the response div and the submit button
-		$('#response, #submit').css({'display': 'block'});
 
-			$('#submit').on('click',  function(ev) {
-				// ev.preventDefault();
-				$('#result').text('Result is ' + convertTemperature(decision) );
-				if ($('#submit').val() === 'Submit') {
-					$('#submit').val () = 'Make Another Conversion';
-				}				
-			});	
+		$('#response, #submit').css({'display': 'block'});
+		$('#submit').on('click',  function(ev) {
+			ev.preventDefault();
+
+			var conVal = convertTemperature(decision);
+			if(conVal != undefined) $('#result').text('Result is ' + conVal);	
+
+				$(this).text('Make Another conversion');
+
+				$(this).on('click', function () {
+					location.reload(true);	
+				});
+
+
+				
+			
+
+			/*
+
+			let originalValue = $('#submit').text('Submit');		
+			if (originalValue == 'Submit') {
+				console.log(originalValue);
+				$(this).text('Make Another conversion');
+				location.reload(true);
+			}
+			else{
+				$(this).text('Submit');
+			}
+
+			*/
+
+
+		});	
+			
 	});
 
+/*
+	$('#submit').on('click', function(e) {
+		e.preventDefault();
+		let originalValue = $(this).prop('text','Submit');
+		if (originalValue == 'Submit') {
+			$(this).text('Make Another conversion');
+			location.reload(true);
+		}
+		else{
+			$(this).text('Submit');
+		}
+		
+
+	})
+	*/
 
 });
 
