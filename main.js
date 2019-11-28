@@ -1,4 +1,4 @@
-let searchPlace;
+
 const key = '9c43b160ab6658aead003013960db21f', units = 'metric';
 // let checkWeather = document.getElementById('search');
 
@@ -74,8 +74,9 @@ $(document).ready(function() {
       fetchWeather(place);
     }
   })
-  
+
 
 });
+ 
 
 
