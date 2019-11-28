@@ -30,20 +30,20 @@
                   </div>
             </nav>
             <main>
-              <article id="weather">
+              <article id="weather-article">
                     <form>
                       <div class="text-description">
                         <p>Geo-Search is used to display the Weather Conditions and map of a place entered into the search bar. The Weather data are displayed above and the location of the place is displayed on a map below.</p>
                       </div>
-                      <div>
-                        <input type="search" name="search" class="search"  placeholder="Name of city">
+                      <div class="search-div">
+                        <input id="search-input" type="search" name="search" class="search"  placeholder="Name of city">
                        <button id="search">Search</button>
                      </div>
                   </form>
               </article> 
               <article class="display-weather">
                   <div class="weather-values">
-                      <div id="weather">
+                      <div ="weather">
                         <h5 id="weather-h">Weather Condition: </h5>
                       </div>
                       <div id="temperature">
@@ -57,6 +57,9 @@
                       </div>
                     </div>
               </article> 
+              <article id="map">
+                
+              </article>
 
           </main>
           <footer>
@@ -69,6 +72,11 @@
               <p><a href="mailto:oladyken@yahoo.com">Shodipe Oladele</a> &copy; 2019</script></p>
           </footer>
           <script src="main.js"></script>
-          
+          <script type="text/javascript" src="map.js"></script>
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUDw1zRVMahufoFfM81XOTeAQuEb_zQ10&libraries=places&callback=autocompleteSearch"></script>
+        <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUDw1zRVMahufoFfM81XOTeAQuEb_zQ10&callback=initMap">
+</script>          
+
       </body>
   </html>
