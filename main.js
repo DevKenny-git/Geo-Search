@@ -63,17 +63,25 @@ $(document).ready(function() {
         
       })
     
-      .catch(err => console.log(err));
+      .catch(err => alert(err));
   
   }
 
+//accept user input and place it in fetchWeather
   $('#search').on('click', function (e) {
     e.preventDefault();
     let place = $('.search').val();
     if (place) {      
       fetchWeather(place);
     }
-  })
+    $(this).text('Check Another');
+    $(this).on('click', function () {
+        // setTimeout(function() {
+        //     location.reload(true);
+        // }, 5000);
+        location.reload(true);
+    });
+  });
 
 
 });

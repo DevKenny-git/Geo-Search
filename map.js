@@ -1,3 +1,12 @@
+//autocomplete input
+function autocompleteSearch() {
+      let input = document.getElementById('search-input');
+      let autocomplete = new google.maps.places.Autocomplete(input);
+      
+
+    }
+
+//initMap callback function
 function initMap() {
         let map = new google.maps.Map(document.getElementById('map'), {
           zoom: 18,
@@ -10,6 +19,7 @@ function initMap() {
         });
       }
 
+//Display map response
       function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('search-input').value;
         geocoder.geocode({'address': address}, function(results, status) {
@@ -25,10 +35,5 @@ function initMap() {
         });
       }
 
-    function autocompleteSearch() {
-      let input = document.getElementById('search-input');
-      let autocompleteValue = new google.maps.places.Autocomplete(input);
-
-    }
-
+    
     
