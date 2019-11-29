@@ -9,7 +9,7 @@ $(document).ready(function() {
   function fetchWeather (city) {
     
 
-    fetch('http://api.openweathermap.org/data/2.5/weather?q='+ city +'&APPID' + '='+key +'&units' + '='+ units)
+    fetch('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q='+ city +'&APPID' + '='+key +'&units' + '='+ units)
       .then((resp) => resp.json())
       .then(function(data) {
         console.log(data);
